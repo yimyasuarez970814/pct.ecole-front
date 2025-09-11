@@ -3,21 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - pct.ecole_front</title>
-
-@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/pct.ecole_front.styles.css" asp-append-version="true" /> *@
-
-
-
-    <link href="img/favicon.ico" rel="icon">
+    <title>@ViewData["Title"] ECOLE – SIMM SAS</title>
+    <link href="~/img/icono.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="~/css/style.css" rel="stylesheet">
-
 </head>
 <body>
     <!-- Topbar Start -->
@@ -25,28 +17,17 @@
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small><i class="fa fa-phone-alt mr-2"></i>+57 350 679 7748</small>
                     <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>info@example.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
+                    <small><i class="fa fa-envelope mr-2"></i>ecole@ecole.com.co</small>
+                    <small class="px-3">|</small>
+                    <a class="text-white px-2"
+                       href="https://wa.me/573506797748?text=¡Buenos días Ecole! Quisiera información sobre sus servicios."
+                       target="_blank">
+                        <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                    <a class="text-white px-2" href="https://www.instagram.com/ECOLE.SA"><i class="fab fa-instagram"></i></a>
+                    <a class="text-white px-2" href="mailto:ecole@ecole.com.co"><i class="fas fa-inbox"></i></a>
                 </div>
             </div>
         </div>
@@ -56,95 +37,91 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>Faster</h1>
+                @*<h1 class="m-0 display-5 text-uppercase text-primary"><i class="fa fa-truck mr-2"></i>Faster</h1>*@
+                <img src="~/img/logo-ecole.png" alt="logo" width="140" />
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
-                    <a href="price.html" class="nav-item nav-link">Price</a>
+                    <a asp-page="/Index" class="nav-item nav-link active">Inicio</a>
+                    <a asp-page="/Services" class="nav-item nav-link">Servicio</a>
+                    <a asp-page="/About" class="nav-item nav-link">Nosotros</a>
+                    <a asp-page="/Contact" class="nav-item nav-link">Contacto</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software ResiduoZero</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            <a href="https://residuozero.ecole.com.co" class="dropdown-item">Iniciar Sesión</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get A Quote</a>
+                <a asp-page="/Contact" class="btn btn-primary py-2 px-4 d-none d-lg-block">Obtener Cotización</a>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
-
     <div>
         <main role="main">
             @RenderBody()
         </main>
     </div>
-
-
     <!-- Blog Start -->
     <div class="container-fluid pt-5">
         <div class="container">
             <div class="text-center pb-2">
-                <h6 class="text-primary text-uppercase font-weight-bold">Our Blog</h6>
-                <h1 class="mb-4">Latest From Blog</h1>
+                <h6 class="text-primary text-uppercase font-weight-bold">Nuestro Blog</h6>
+                <h1 class="mb-4">Nuestro día a día</h1>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-5">
                     <div class="position-relative">
                         <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
-                        <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
+                        @* <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
                              style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
                             <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
+                            <small class="text-white text-uppercase">Ene</small>
+                        </div> *@
                     </div>
                     <div class="bg-secondary" style="padding: 30px;">
-                        <div class="d-flex mb-3">
+                    @*     <div class="d-flex mb-3">
                             <div class="d-flex align-items-center">
                                 <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
                                 <a class="text-muted ml-2" href="">John Doe</a>
                             </div>
                             <div class="d-flex align-items-center ml-4">
                                 <i class="far fa-bookmark text-primary"></i>
-                                <a class="text-muted ml-2" href="">Web Design</a>
+                                <a class="text-muted ml-2" href="">Diseño Web</a>
                             </div>
-                        </div>
+                        </div> *@
                         <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
                         <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                        <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
+                        <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Leer Más <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 mb-5">
                     <div class="position-relative">
                         <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
-                        <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
+                       @*  <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
                              style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
                             <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
+                            <small class="text-white text-uppercase">Ene</small>
+                        </div> *@
                     </div>
                     <div class="bg-secondary" style="padding: 30px;">
-                        <div class="d-flex mb-3">
+                    @*     <div class="d-flex mb-3">
                             <div class="d-flex align-items-center">
                                 <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
                                 <a class="text-muted ml-2" href="">John Doe</a>
                             </div>
                             <div class="d-flex align-items-center ml-4">
                                 <i class="far fa-bookmark text-primary"></i>
-                                <a class="text-muted ml-2" href="">Web Design</a>
+                                <a class="text-muted ml-2" href="">Diseño Web</a>
                             </div>
-                        </div>
+                        </div> *@
                         <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
                         <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                        <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
+                        <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Leer Más <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -152,42 +129,32 @@
     </div>
     <!-- Blog End -->
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="row pt-5">
-            <div class="col-lg-7 col-md-6">
+    <div class="container-fluid bg-dark text-white pt-5">
+        <div class="container">
+            <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-6 mb-5">
-                        <h3 class="text-primary mb-4">Get In Touch</h3>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <h3 class="text-primary mb-4">Contacto</h3>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Bogotá, Cra </p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+57 350 679 7748</p>
+                        <p><i class="fa fa-envelope mr-2"></i>ecole@ecole.com.co</p>
                         <div class="d-flex justify-content-start mt-4">
-                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="mailto:ecole@ecole.com.co"><i class="fas fa-inbox"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/ECOLE.SA"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                               href="https://wa.me/573506797748?text=¡Buenos días Ecole! Quisiera información sobre sus servicios."
+                               target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="col-md-6 mb-5">
-                        <h3 class="text-primary mb-4">Quick Links</h3>
+                        <h3 class="text-primary mb-4">Enlaces Rápidos</h3>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-6 mb-5">
-                <h3 class="text-primary mb-4">Newsletter</h3>
-                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
+                            <a class="text-white mb-2" asp-page="/Index"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-white mb-2" asp-page="/About"><i class="fa fa-angle-right mr-2"></i>Sobre Nosotros</a>
+                            <a class="text-white mb-2" asp-page="/Services"><i class="fa fa-angle-right mr-2"></i>Nuestros Servicios</a>
+                            <a class="text-white" asp-page="/Contact"><i class="fa fa-angle-right mr-2"></i>Contáctenos</a>
                         </div>
                     </div>
                 </div>
@@ -198,40 +165,27 @@
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white">
-                    &copy; <a href="#">Your Site Name</a>. All Rights Reserved.
-
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    &copy; Diseñado por <a href="https://procotec.com.co">procotec.com.co</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
                 <ul class="nav d-inline-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                        <a class="nav-link text-white py-0" href="#">Privacidad</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                        <a class="nav-link text-white py-0" href="#">Términos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                        <a class="nav-link text-white py-0" href="#">Preguntas Frecuentes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
+                        <a class="nav-link text-white py-0" asp-page="/Contact">Ayuda</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-
-
-
-@* 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
- *@
-
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -242,8 +196,6 @@
     <script src="~/mail/jqBootstrapValidation.min.js"></script>
     <script src="~/mail/contact.js"></script>
     <script src="~/js/main.js"></script>
-
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
