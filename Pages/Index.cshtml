@@ -1,10 +1,18 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Página de inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Estamos en contrucción</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">Próximo lanzamiento</a>.</p>
-</div>
+
+@await Html.PartialAsync("Partial/_Slider")
+
+@await Html.PartialAsync("Partial/_About")
+
+@await Html.PartialAsync("Partial/_DetailServices")
+
+@await Html.PartialAsync("Partial/_Features")
+
+@await Html.PartialAsync("Partial/_Services")
+
+

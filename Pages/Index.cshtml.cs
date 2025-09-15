@@ -7,6 +7,8 @@ namespace pct.ecole_front.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+        [TempData] public string RespuestaCorreo { get; set; }
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;

@@ -1,0 +1,55 @@
+﻿<!--  Quote Request Start -->
+<div class="container-fluid bg-secondary my-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 py-5 py-lg-0">
+                <h6 class="text-primary text-uppercase font-weight-bold">Obtener una cotización</h6>
+                <h1 class="mb-4">Solicita una cotización gratis</h1>
+                <p class="mb-4">¿Tienes residuos que aún no sabes cómo manejar? Aquí estamos para ayudarte a reducir tu impacto y construir un futuro más limpio, juntos.</p>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h1 class="text-primary mb-2" data-toggle="counter-up">1050</h1>
+                        <h6 class="font-weight-bold mb-4">Servicios completados</h6>
+                    </div>
+                    <div class="col-sm-4">
+                        <h1 class="text-primary mb-2" data-toggle="counter-up">30</h1>
+                        <h6 class="font-weight-bold mb-4">Clientes aliados</h6>
+                    </div>
+                    <div class="col-sm-4">
+                        <h1 class="text-primary mb-2" data-toggle="counter-up">7</h1>
+                        <h6 class="font-weight-bold mb-4">Años acompañandote</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="bg-primary py-5 px-4 px-sm-5">
+                    <form class="py-5" name="sentMessage" id="newServiceForm" novalidate="novalidate" asp-page="/Services" asp-page-handler="Send">
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0 p-4" name="name"  placeholder="Tu Nombre" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control border-0 p-4" name="email" placeholder="Tu Correo Electrónico" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select border-0 px-4" name="service" style="height: 47px;">
+                                <option selected>Selecciona un servicio</option>
+                                <option value="1">Gestión de residuos</option>
+                                <option value="2">Transporte especializado</option>
+                                <option value="3">Mano de obra in house</option>
+                                <option value="4">Soluciones ambientales personalizadas</option>
+                                <option value="5">Otro</option>
+                            </select>
+                        </div>
+                        <div id="success" class="alert alert-success" style="display:@(!string.IsNullOrEmpty(Model.RespuestaCorreo) ? "block" : "none")">
+                            @Model.RespuestaCorreo
+                        </div>
+                        <div>
+                            <button class="btn btn-dark btn-block border-0 py-3" type="submit">Obtener una cotización</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Quote Request Start -->

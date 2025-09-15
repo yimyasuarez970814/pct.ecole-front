@@ -1,0 +1,54 @@
+﻿
+<!-- Contact Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 pb-4 pb-lg-0">
+                <div class="bg-primary text-dark text-center p-4">
+                    <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>Cra. 81a #146A-14, Bogotá D.C., Colombia</h4>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.0457848192137!2d-74.07874277147369!3d4.738220699701071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f84fd6c004625%3A0x98985399e32b50e6!2sCra.%2081a%20%23146A-14%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1757561207779!5m2!1ses-419!2sco" width="100%" height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-lg-7">
+                <h6 class="text-primary text-uppercase font-weight-bold">Estamos ubicados en Bogotá</h6>
+                <h1 class="mb-4">Escribenos para cualquier inquietud</h1>
+                <div class="contact-form bg-secondary" style="padding: 30px;">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="newContactForm" novalidate="novalidate" asp-page="/Contact" asp-page-handler="Send">
+                        <div class="control-group">
+                            <input type="text" class="form-control border-0 p-4" id="name" name="name" placeholder="Nombre"
+                                   required="required" data-validation-required-message="Ingresa tu nombre" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="email" class="form-control border-0 p-4" id="email" name="email" placeholder="Correo"
+                                   required="required" data-validation-required-message="Ingresa tu correo" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control border-0 p-4" id="subject" name="subject" placeholder="Asunto"
+                                   required="required" data-validation-required-message="Asunto" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" name="message" placeholder="Mensaje"
+                                      required="required"
+                                      data-validation-required-message="Ingresa tu mensaje"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">
+                                Enviar
+                                Mensaje
+                            </button>
+                        </div>
+                        <div id="success" class="alert alert-success" style="display:@(!string.IsNullOrEmpty(Model.RespuestaCorreo) ? "block" : "none")">
+                            @Model.RespuestaCorreo
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
