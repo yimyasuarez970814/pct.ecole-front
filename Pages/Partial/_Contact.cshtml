@@ -14,24 +14,24 @@
                 <h1 class="mb-4">Escribenos para cualquier inquietud</h1>
                 <div class="contact-form bg-secondary" style="padding: 30px;">
                     <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <form name="sentMessage" id="newContactForm" novalidate="novalidate" asp-page="/Contact" asp-page-handler="Send">
                         <div class="control-group">
-                            <input type="text" class="form-control border-0 p-4" id="name" placeholder="Nombre"
+                            <input type="text" class="form-control border-0 p-4" id="name" name="name" placeholder="Nombre"
                                    required="required" data-validation-required-message="Ingresa tu nombre" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="email" class="form-control border-0 p-4" id="email" placeholder="Correo"
+                            <input type="email" class="form-control border-0 p-4" id="email" name="email" placeholder="Correo"
                                    required="required" data-validation-required-message="Ingresa tu correo" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Asunto"
+                            <input type="text" class="form-control border-0 p-4" id="subject" name="subject" placeholder="Asunto"
                                    required="required" data-validation-required-message="Asunto" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" placeholder="Mensaje"
+                            <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" name="message" placeholder="Mensaje"
                                       required="required"
                                       data-validation-required-message="Ingresa tu mensaje"></textarea>
                             <p class="help-block text-danger"></p>
@@ -41,6 +41,9 @@
                                 Enviar
                                 Mensaje
                             </button>
+                        </div>
+                        <div id="success" class="alert alert-success" style="display:@(!string.IsNullOrEmpty(Model.RespuestaCorreo) ? "block" : "none")">
+                            @Model.RespuestaCorreo
                         </div>
                     </form>
                 </div>

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace pct.ecole_front.Pages.Partial
 {
-    public class Services : PageModel
+    public class _Services : PageModel
     {
         public void OnGet()
         {

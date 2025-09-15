@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace pct.ecole_front.Pages.Partial
 {
-    public class DetailServices : PageModel
+    public class _Slider : PageModel
     {
         public void OnGet()
         {

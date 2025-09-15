@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace pct.ecole_front.Pages.Partial
 {
-    public class ContactModel : PageModel
+    public class _Testimonials : PageModel
     {
         public void OnGet()
         {
