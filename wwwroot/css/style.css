@@ -9706,9 +9706,37 @@ p,
 }
 
 
-
 @media (max-width: 767.98px) {
     .ocultar-en-movil {
         display: none !important;
     }
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 95px;
+    right: 24px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+    .whatsapp-float:hover {
+        background-color: #A11881;
+        color: #C2D72F;
+        text-decoration: none;
+    }
+
+.whatsapp-icon {
+    margin: 0;
 }

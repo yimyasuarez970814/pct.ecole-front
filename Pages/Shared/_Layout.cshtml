@@ -48,22 +48,22 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicio</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a asp-page="/ServiceOne" class="dropdown-item">Gestión Integral de Residuos</a>
-                            <a asp-page="/ServiceTwo" class="dropdown-item">Logística de Transporte de Residuos</a>
-                            <a asp-page="/ServiceThree" class="dropdown-item">Suministro de Mano de Obra In House</a>
-                            <a asp-page="/ServiceFour" class="dropdown-item">Soluciones Ambientales a la Medida</a>
+                            <a asp-page="/ServiceOne" class="dropdown-item"><img src="~/img/icono.ico" width="20px" class="mr-2" /> Gestión Integral de Residuos</a>
+                            <a asp-page="/ServiceTwo" class="dropdown-item"><img src="~/img/icono.ico" width="20px" class="mr-2" />Logística de Transporte de Residuos</a>
+                            <a asp-page="/ServiceThree" class="dropdown-item"><img src="~/img/icono.ico" width="20px" class="mr-2" />Suministro de Mano de Obra In House</a>
+                            <a asp-page="/ServiceFour" class="dropdown-item"><img src="~/img/icono.ico" width="20px" class="mr-2" />Soluciones Ambientales a la Medida</a>
                         </div>
                     </div>
                     <a asp-page="/About" class="nav-item nav-link">Nosotros</a>
                     <a asp-page="/Contact" class="nav-item nav-link">Contacto</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software ResiduoZero</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Software OLA</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="https://residuozero.ecole.com.co" class="dropdown-item">Iniciar Sesión</a>
+                            <a href="https://ola.ecole.com.co" class="dropdown-item"><img src="~/img/icono.ico" width="20px" class="mr-2" />Iniciar Sesión</a>
                         </div>
                     </div>
                 </div>
-                <a asp-page="/Contact" class="btn btn-primary py-2 px-4 d-none d-lg-block">Obtener Cotización</a>
+                <a asp-page="/Contact" class="btn btn-primary py-2 px-4 d-none d-lg-block">Obtener cotización gratuita</a>
             </div>
         </nav>
     </div>
@@ -73,7 +73,12 @@
             @RenderBody()
         </main>
     </div>
-   
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/573506797748?text=¡Buenos días Ecole! Quisiera información sobre sus servicios." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white pt-5">
         <div class="container">
@@ -81,7 +86,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-5">
                         <h3 class="text-primary mb-4">Contacto</h3>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>Bogotá, Cra </p>
+                        @*<p><i class="fa fa-map-marker-alt mr-2"></i>Bogotá, Cra </p>*@
                         <p><i class="fa fa-phone-alt mr-2"></i>+57 350 679 7748</p>
                         <p><i class="fa fa-envelope mr-2"></i>ecole@ecole.com.co</p>
                         <div class="d-flex justify-content-start mt-4">
